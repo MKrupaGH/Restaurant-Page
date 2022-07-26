@@ -6,9 +6,9 @@ const pageload = (() => {
         <div class="logo"><h2>Let's eat</h2></div>
         <div class="links">
             <ul class="list">
-                <li class="option"><a href="#home">Home</a></li>
-                <li class="option"><a href="#menu">Menu</a></li>
-                <li class="option"><a href="#contact">Contact</a></li>
+                <li class="option" data-tab-target="#home">Home</li>
+                <li class="option" data-tab-target="#menu">Menu</li>
+                <li class="option" data-tab-target="#contact">Contact</li>
             </ul>
         <div>
     </nav>
