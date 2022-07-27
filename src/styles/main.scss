@@ -5,18 +5,19 @@
 }
 
 #content {
+  background: url(../assets/home-foto.jpg) no-repeat;
+  min-height: 100vh;
   header {
-    width: 100%;
-    background-color: #97b927;
-
     nav {
-      height: 5vh;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       padding: 5px;
       margin: 0px 20px;
+      @media (max-width: 600px) {
+        flex-direction: column;
+      }
       .logo {
         h2 {
           font-size: 3rem;
@@ -24,10 +25,12 @@
         }
       }
       .links {
-        display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        @media (max-width: 600px) {
+          margin-top: 20px;
+        }
         ul {
           display: flex;
           flex-direction: row;
@@ -53,29 +56,43 @@
   }
 
   #home {
+    margin-top: 100px;
+
+    @media (max-width: 600px) {
+      margin-top: 50px;
+    }
     .home-layout {
-      height: 95vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      background: url(../assets/home-foto.jpg) no-repeat center center;
-      opacity: 0.9;
+
       .welcome {
         font-size: 2.5rem;
         width: 50%;
         text-align: center;
         color: white;
         margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: 600px) {
+          font-size: 1.5rem;
+        }
         .text {
           font-size: 3rem;
+          @media (max-width: 600px) {
+            font-size: 2.2rem;
+          }
         }
         .smaller-text {
           font-size: 1.5rem;
+          @media (max-width: 600px) {
+            font-size: 1rem;
+          }
         }
         .menu-link {
           margin-top: 15px;
-
+          max-width: 70%;
           text-decoration: none;
           color: #97b927;
           opacity: 0.8;
@@ -95,8 +112,16 @@
         text-align: center;
         font-size: 1.5rem;
         color: white;
+
+        @media (max-width: 600px) {
+          margin-bottom: 20px;
+        }
         span {
           color: black;
+
+          @media (max-width: 600px) {
+            margin: 0 10px;
+          }
         }
       }
     }
@@ -104,27 +129,28 @@
 
   #menu {
     .menu-layout {
-      height: 95vh;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: url(../assets/home-foto.jpg) no-repeat center center;
       .menu-page {
         width: 80vw;
-        height: 80vh;
         max-width: 700px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 5px solid #97b927;
-        background-color: #97b927;
-        border-radius: 20px;
+        //border: 5px solid #97b927;
+        //background-color: #97b927;
+        //border-radius: 20px;
         padding: 20px;
         h1 {
           font-size: 2.5rem;
           color: white;
           margin-bottom: 30px;
+          @media (max-width: 600px) {
+            font-size: 2rem;
+          }
         }
         .dishes {
           .dish {
@@ -137,13 +163,19 @@
             img {
               width: 100px;
               height: 100px;
+              @media (max-width: 600px) {
+                width: 75px;
+                height: 75px;
+              }
             }
             .info {
               .name-price {
                 h4 {
                   font-size: 1.5rem;
                   border-bottom: 2px dotted white;
-
+                  @media (max-width: 600px) {
+                    font-size: 1.2rem;
+                  }
                   span {
                     float: right;
                     font-size: 1.3rem;
@@ -164,10 +196,8 @@
 
   #contact {
     .contact-layout {
-      height: 95vh;
       display: flex;
       justify-content: center;
-      background: url(../assets/home-foto.jpg) no-repeat center center;
       color: white;
       .contact-page {
         display: flex;
@@ -176,69 +206,95 @@
         h1 {
           text-align: center;
           font-size: 2.5rem;
-          margin: 20px 0;
+          margin-top: 40px;
+
+          @media (max-width: 600px) {
+            font-size: 2rem;
+          }
         }
+        .info-layout {
+          display: flex;
+          flex-direction: row;
+          gap: 30px;
 
-        .contact-info {
-          max-width: 700px;
-          background-color: #97b927;
-          border: 5px solid #97b927;
-          border-radius: 20px;
-          padding: 20px;
-          .us {
-            display: flex;
+          @media (max-width: 900px) {
             flex-direction: column;
-            margin: 40px 0;
-            align-items: center;
-            .title {
-              font-size: 2rem;
-              margin-bottom: 10px;
-            }
-            h3 {
-              font-size: 1.8rem;
-            }
-
-            form {
+          }
+          .contact-info {
+            max-width: 700px;
+            padding: 0px;
+            .us {
               display: flex;
               flex-direction: column;
+              margin: 40px 0;
               align-items: center;
-              width: 50%;
-              input {
-                border: #97b927;
-                border-radius: 5px;
-                height: 30px;
-                margin-bottom: 20px;
-                font-size: 1.2rem;
-                padding: 5px;
+              .title {
+                font-size: 2rem;
+                margin-bottom: 10px;
               }
-              textarea {
-                border: #97b927;
-                border-radius: 5px;
-                resize: none;
-                font-size: 1.2rem;
-                padding: 5px;
+              h3 {
+                font-size: 1.8rem;
               }
-              input[type="submit"] {
-                margin-top: 20px;
-                font-size: 1.2rem;
-                width: 40%;
-                height: 40px;
-                border: 5px solid white;
-                border-radius: 5px;
-                background-color: white;
-                color: #97b927;
+              @media (max-width: 600px) {
+                .title {
+                  font-size: 1.5rem;
+                }
+                h3 {
+                  font-size: 1.2rem;
+                  margin: 0 10px;
+                }
               }
 
-              input[type="submit"]:hover {
-                color: white;
-                background-color: #5e7419;
-                border-color: #5e7419;
+              form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                input {
+                  border: #97b927;
+                  border-radius: 5px;
+                  height: 30px;
+                  margin-bottom: 20px;
+                  font-size: 1.2rem;
+                  padding: 5px;
+                }
+                textarea {
+                  border: #97b927;
+                  border-radius: 5px;
+                  resize: none;
+                  font-size: 1.2rem;
+                  padding: 5px;
+                }
+                input[type="submit"] {
+                  margin-top: 20px;
+                  font-size: 1.2rem;
+                  width: 40%;
+                  height: 40px;
+                  border: 5px solid white;
+                  border-radius: 5px;
+                  background-color: white;
+                  color: #97b927;
+                }
+
+                input[type="submit"]:hover {
+                  color: white;
+                  background-color: #5e7419;
+                  border-color: #5e7419;
+                }
+              }
+            }
+            @media (max-width: 600px) {
+              .us {
+                margin: 15px 0;
               }
             }
           }
-        }
-        .map {
-          margin-top: 20px;
+          .map {
+            margin-top: 20px;
+            @media (max-width: 600px) {
+              display: none;
+            }
+          }
         }
       }
     }
